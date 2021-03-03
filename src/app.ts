@@ -1,7 +1,7 @@
-import express from "express";
+import express, { Application, Request, Response, NextFunction } from "express";
 
-const app = express();
-app.get("/", (req, res) => {
+const app: express.Application = express();
+app.get("/", (req: Request, res: Response, next: NextFunction) => {
   res.send("Hello");
 });
 
